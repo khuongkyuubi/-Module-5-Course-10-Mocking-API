@@ -5,8 +5,8 @@ module.exports = (req, res) => {
     let user = users.find(user => user.id === +req.params.user_id);
 
     if(!user) {
-        return res.status(401).json({
-            message: "user not found"
+        return res.status(200).json({
+            message: "user not found by mock api"
         });
     }
 
