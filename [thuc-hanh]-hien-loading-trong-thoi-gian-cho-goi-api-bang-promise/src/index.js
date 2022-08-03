@@ -10,6 +10,7 @@ import {
     Link,
 } from "react-router-dom";
 import UserDetails from "./components/UserDetails";
+import App2 from "./App2";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,6 +18,7 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path={"/"} element={<App/>}/>
+                <Route path={"/2"} element={<App2/>}/>
                 <Route path={"users/:userId"} element={<UserDetails/>}/>
             </Routes>
         </BrowserRouter>
