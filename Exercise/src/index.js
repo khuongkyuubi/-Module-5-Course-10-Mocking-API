@@ -10,15 +10,22 @@ import {
     Link,
 } from "react-router-dom";
 import UserDetails from "./components/UserDetails";
-import App2 from "./App";
+import Todos from "./components/Todos/Todos";
+import BookManager from "./components/Books/BookManager";
+import CreateOrUpdate from "./components/Books/CreateOrUpdate";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <BrowserRouter>
             <Routes>
-                <Route path={"/"} element={<App/>}/>
+                <Route path={"/"} element={<App/>}>
+                <Route path={"/todos"} element={<Todos/>}/>
                 <Route path={"users/:userId"} element={<UserDetails/>}/>
+
+                    <Route path={"books"} element={<BookManager/>}/>
+                    <Route path={"books/:bookId"} element={<CreateOrUpdate/>}/>
+                </Route>
             </Routes>
         </BrowserRouter>
     </React.StrictMode>

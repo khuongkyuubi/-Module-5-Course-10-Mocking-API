@@ -1,7 +1,7 @@
 import {Component} from 'react';
 import axios from 'axios';
 
-export default class App extends Component {
+export default class Todos extends Component {
     constructor(props) {
         super(props)
         this.state = {
